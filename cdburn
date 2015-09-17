@@ -1,0 +1,4 @@
+#!/bin/bash
+DEV=`cdrecord -scanbus | grep CD |awk '{print $1}'`
+iso=$1
+cdrecord -v -eject -dao dev=$DEV $iso
